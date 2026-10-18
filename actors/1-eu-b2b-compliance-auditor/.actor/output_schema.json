@@ -1,13 +1,14 @@
 {
   "actorOutputSchemaVersion": 1,
   "title": "EU B2B Compliance Auditor Output",
+  "description": "Output schema for EU B2B Compliance Auditor results",
   "type": "object",
   "properties": {
-    "resultsDatasetUrl": {
+    "dataset": {
       "type": "string",
-      "title": "Audited B2B Records",
-      "description": "Dataset containing company legal info, VAT, SIREN, GDPR, EAA, and AI scores.",
-      "resourceType": "dataset"
+      "title": "Dataset",
+      "description": "Contains the audited company records (SIREN, VAT, GDPR, EAA, and AI scores).",
+      "template": "{{links.apiDefaultDatasetUrl}}/items"
     }
   }
 }
