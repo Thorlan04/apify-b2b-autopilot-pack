@@ -1,0 +1,147 @@
+{
+  "version": "1.0.0",
+  "last_updated": "2026-10-18T09:43:15Z",
+  "ai_crawlers": [
+    {
+      "name": "GPTBot",
+      "company": "OpenAI",
+      "category": "LLM Pre-training / Search"
+    },
+    {
+      "name": "OAI-SearchBot",
+      "company": "OpenAI",
+      "category": "SearchGPT / Real-time index"
+    },
+    {
+      "name": "ClaudeBot",
+      "company": "Anthropic",
+      "category": "Claude AI Search & Answers"
+    },
+    {
+      "name": "PerplexityBot",
+      "company": "Perplexity AI",
+      "category": "AI Search Engine"
+    },
+    {
+      "name": "Google-Extended",
+      "company": "Google",
+      "category": "Gemini & Vertex AI Training"
+    },
+    {
+      "name": "Applebot-Extended",
+      "company": "Apple",
+      "category": "Apple Intelligence"
+    },
+    {
+      "name": "Amazonbot",
+      "company": "Amazon",
+      "category": "Amazon Alexa & Rufus AI"
+    },
+    {
+      "name": "CCBot",
+      "company": "Common Crawl",
+      "category": "Open Dataset for LLM Training"
+    },
+    {
+      "name": "Bytespider",
+      "company": "ByteDance",
+      "category": "Doubao / TikTok AI"
+    },
+    {
+      "name": "cohere-ai",
+      "company": "Cohere",
+      "category": "Enterprise LLMs"
+    },
+    {
+      "name": "DeepSeekBot",
+      "company": "DeepSeek",
+      "category": "DeepSeek AI Crawler"
+    },
+    {
+      "name": "MistralBot",
+      "company": "Mistral AI",
+      "category": "Mistral AI Search"
+    }
+  ],
+  "legal_paths": [
+    "/mentions-legales",
+    "/mentions-legales/",
+    "/legal-notice",
+    "/legal-notices",
+    "/politique-de-confidentialite",
+    "/politique-confidentialite",
+    "/privacy-policy",
+    "/privacy",
+    "/donnees-personnelles",
+    "/terms",
+    "/conditions-generales",
+    "/cgu",
+    "/cgv"
+  ],
+  "cookie_consent_signatures": [
+    "tarteaucitron",
+    "axeptio",
+    "didomi",
+    "cookiebot",
+    "onetrust",
+    "complianz",
+    "usercentrics",
+    "quantcast",
+    "klaro",
+    "cookie-banner",
+    "consent-banner",
+    "cookie_notice"
+  ],
+  "trackers": [
+    {
+      "name": "Google Analytics / Tag Manager",
+      "pattern": "googletagmanager.com/gtm.js|google-analytics.com/analytics.js|gtag\\('config'"
+    },
+    {
+      "name": "Meta Pixel",
+      "pattern": "connect.facebook.net/en_US/fbevents.js|fbq\\('init'"
+    },
+    {
+      "name": "LinkedIn Insight",
+      "pattern": "snap.licdn.com/li.lms-analytics/insight.min.js|_linkedin_partner_id"
+    },
+    {
+      "name": "Hotjar",
+      "pattern": "static.hotjar.com|hjid"
+    },
+    {
+      "name": "TikTok Pixel",
+      "pattern": "analytics.tiktok.com|ttq.load"
+    },
+    {
+      "name": "Microsoft Clarity",
+      "pattern": "clarity.ms/tag"
+    },
+    {
+      "name": "Criteo",
+      "pattern": "static.criteo.net/js/ld/ld.js"
+    }
+  ],
+  "accessibility_rules": [
+    {
+      "id": "html_lang",
+      "title": "Lang attribute on root html",
+      "weight": 25
+    },
+    {
+      "id": "image_alt",
+      "title": "Alt attributes on content images",
+      "weight": 25
+    },
+    {
+      "id": "form_labels",
+      "title": "Accessible labels on form controls",
+      "weight": 25
+    },
+    {
+      "id": "semantic_structure",
+      "title": "Semantic HTML5 landmarks (header, nav, main, footer)",
+      "weight": 25
+    }
+  ]
+}

@@ -1,0 +1,36 @@
+{
+  "title": "EU B2B Legal & Compliance Auditor Input",
+  "type": "object",
+  "schemaVersion": 1,
+  "properties": {
+    "targets": {
+      "title": "Domains or Company Names",
+      "type": "array",
+      "description": "List of domains (e.g. 'doctolib.fr', 'ovhcloud.com') or company names to audit.",
+      "editor": "stringList",
+      "prefill": [
+        "doctolib.fr",
+        "ovhcloud.com"
+      ],
+      "default": [
+        "doctolib.fr",
+        "ovhcloud.com"
+      ]
+    },
+    "timeout_seconds": {
+      "title": "Request Timeout (Seconds)",
+      "type": "integer",
+      "description": "Timeout in seconds for external API and website audits.",
+      "default": 15,
+      "minimum": 5,
+      "maximum": 60
+    },
+    "deep_scan": {
+      "title": "Deep Scan Legal Pages",
+      "type": "boolean",
+      "description": "When enabled, checks legal subpages (/mentions-legales, /privacy, /terms) and /robots.txt & /llms.txt.",
+      "default": true
+    }
+  },
+  "required": ["targets"]
+}

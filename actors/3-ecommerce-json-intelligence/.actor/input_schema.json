@@ -1,0 +1,44 @@
+{
+  "title": "E-Commerce JSON Intelligence Input",
+  "type": "object",
+  "schemaVersion": 1,
+  "properties": {
+    "stores": {
+      "title": "Store Domains or URLs",
+      "type": "array",
+      "description": "List of e-commerce store domains or URLs (e.g. 'allbirds.com', 'gymshark.com').",
+      "editor": "stringList",
+      "prefill": [
+        "allbirds.com",
+        "gymshark.com"
+      ],
+      "default": [
+        "allbirds.com",
+        "gymshark.com"
+      ]
+    },
+    "max_products_per_store": {
+      "title": "Max Products per Store",
+      "type": "integer",
+      "description": "Maximum number of products to extract per store.",
+      "default": 100,
+      "minimum": 5,
+      "maximum": 1000
+    },
+    "extract_variants": {
+      "title": "Extract Full Variant Details",
+      "type": "boolean",
+      "description": "Extract full variant list including individual SKUs, prices, and stock statuses.",
+      "default": true
+    },
+    "timeout_seconds": {
+      "title": "Timeout (Seconds)",
+      "type": "integer",
+      "description": "HTTP request timeout per endpoint probe.",
+      "default": 15,
+      "minimum": 5,
+      "maximum": 60
+    }
+  },
+  "required": ["stores"]
+}

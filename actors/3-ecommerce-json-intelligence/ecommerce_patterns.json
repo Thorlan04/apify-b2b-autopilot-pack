@@ -1,0 +1,42 @@
+{
+  "version": "1.0.0",
+  "last_updated": "2026-10-18T09:43:15Z",
+  "shopify": {
+    "endpoints": [
+      "/products.json?limit=250",
+      "/collections/all/products.json?limit=250"
+    ],
+    "pagination_param": "page"
+  },
+  "woocommerce": {
+    "endpoints": [
+      "/wp-json/wc/store/v1/products?per_page=100",
+      "/wp-json/wc/v3/products?per_page=100"
+    ]
+  },
+  "generic_api": {
+    "endpoints": [
+      "/api/products",
+      "/api/catalog/products",
+      "/api/v1/products"
+    ]
+  },
+  "schema_org": {
+    "product_types": [
+      "Product",
+      "IndividualProduct",
+      "ProductModel",
+      "ProductCollection"
+    ],
+    "offer_types": [
+      "Offer",
+      "AggregateOffer"
+    ]
+  },
+  "sitemaps": [
+    "/sitemap_products_1.xml",
+    "/product-sitemap.xml",
+    "/sitemap-products.xml",
+    "/sitemap.xml"
+  ]
+}

@@ -1,0 +1,49 @@
+name: Weekly Pack Updater & Apify Keep-Alive
+
+on:
+  schedule:
+    # Trigger automatically every Monday at 04:00 UTC
+    - cron: '0 4 * * 1'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  auto-update-and-test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Set up Python 3.11
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: 'pip'
+
+      - name: Install Monorepo Dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install requests beautifulsoup4 apify urllib3
+
+      - name: Run Weekly Maintenance & Health Checks
+        run: |
+          python brain_updater/auto_update_pack.py
+
+      - name: Commit and Push Updates
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          
+          # Check if any tracked or new files have changed
+          if [[ -n $(git status --porcelain) ]]; then
+            echo "Changes detected. Committing and pushing to main branch..."
+            git add .
+            git commit -m "chore(auto-update): weekly maintenance patch bump [skip ci]"
+            git push origin main
+          else
+            echo "No changes detected. All signatures and files are up-to-date."
+          fi

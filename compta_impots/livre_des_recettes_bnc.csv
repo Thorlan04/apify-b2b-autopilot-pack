@@ -1,0 +1,7 @@
+date_encaissement;reference_piece;client_nom;pays_client;nature_prestation;montant_ht_eur;tva_taux;tva_montant;montant_ttc_eur;mode_reglement;taux_change_usd_eur;devise_origine_usd;reference_virement_apify
+2026-05-05;FAC-2026-001;Apify Technologies s.r.o.;République Tchèque (UE);Revenus Apify Store (Prestation BNC informatique);1450.00;0.00;0.00;1450.00;Virement bancaire SEPA;0.92;1576.09;APIFY-PAY-202605
+2026-06-05;FAC-2026-002;Apify Technologies s.r.o.;République Tchèque (UE);Revenus Apify Store (Prestation BNC informatique);1820.50;0.00;0.00;1820.50;Virement bancaire SEPA;0.91;2000.55;APIFY-PAY-202606
+2026-07-06;FAC-2026-003;Apify Technologies s.r.o.;République Tchèque (UE);Revenus Apify Store (Prestation BNC informatique);2140.00;0.00;0.00;2140.00;Virement bancaire SEPA;0.92;2326.09;APIFY-PAY-202607
+2026-08-05;FAC-2026-004;Apify Technologies s.r.o.;République Tchèque (UE);Revenus Apify Store (Prestation BNC informatique);2680.00;0.00;0.00;2680.00;Virement bancaire SEPA;0.93;2881.72;APIFY-PAY-202608
+2026-09-07;FAC-2026-005;Apify Technologies s.r.o.;République Tchèque (UE);Revenus Apify Store (Prestation BNC informatique);3150.25;0.00;0.00;3150.25;Virement bancaire SEPA;0.91;3461.81;APIFY-PAY-202609
+2026-10-05;FAC-2026-006;Apify Technologies s.r.o.;République Tchèque (UE);Revenus Apify Store (Prestation BNC informatique);3420.00;0.00;0.00;3420.00;Virement bancaire SEPA;0.92;3717.39;APIFY-PAY-202610

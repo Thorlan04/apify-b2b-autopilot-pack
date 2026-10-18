@@ -1,0 +1,15 @@
+{
+  "actorSpecification": 1,
+  "name": "ecommerce-json-intelligence",
+  "title": "E-Commerce JSON Intelligence (Shopify, WooCommerce, Schema.org Products & Prices)",
+  "description": "Proxy-free e-commerce catalog & pricing scraper. Extracts products, variants, SKUs, inventory stock status, prices, and discounts via public JSON endpoints (Shopify /products.json, WooCommerce API) and JSON-LD Schema.org product feeds. Built for competitor monitoring and retail analytics.",
+  "version": "1.0.1",
+  "meta": {
+    "templateId": "python-empty"
+  },
+  "dockerfile": "./Dockerfile",
+  "input": "./input_schema.json",
+  "storages": {
+    "dataset": "./dataset_schema.json"
+  }
+}

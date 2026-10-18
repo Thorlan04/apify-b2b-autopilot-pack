@@ -1,0 +1,15 @@
+{
+  "actorSpecification": 1,
+  "name": "eu-b2b-compliance-auditor",
+  "title": "EU B2B Legal & Compliance Auditor (SIREN, VAT, GDPR, EAA, AI Readiness)",
+  "description": "Extracts verified French & EU company data (SIREN, SIRET, intra-community VAT, NAF code, legal representatives) and audits websites for GDPR compliance, European Accessibility Act (EAA 2025), and AI Agent readiness (llms.txt, robots.txt, schema.org). Built for B2B agencies and automated outreach.",
+  "version": "1.0.1",
+  "meta": {
+    "templateId": "python-empty"
+  },
+  "dockerfile": "./Dockerfile",
+  "input": "./input_schema.json",
+  "storages": {
+    "dataset": "./dataset_schema.json"
+  }
+}

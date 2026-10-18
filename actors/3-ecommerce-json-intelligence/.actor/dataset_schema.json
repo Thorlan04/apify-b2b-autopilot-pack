@@ -1,0 +1,57 @@
+{
+  "actorSpecification": 1,
+  "fields": {
+    "store_domain": {
+      "type": "string",
+      "description": "Store root domain or audited URL"
+    },
+    "platform_detected": {
+      "type": "string",
+      "description": "Detected e-commerce platform (Shopify, WooCommerce, Schema.org LD-JSON, Custom)"
+    },
+    "currency": {
+      "type": "string",
+      "description": "Catalog pricing currency"
+    },
+    "total_products_extracted": {
+      "type": "integer",
+      "description": "Total number of products extracted"
+    },
+    "catalog_stats": {
+      "type": "object",
+      "description": "Statistical summary: min_price, max_price, avg_price, discount_rate, in_stock_ratio"
+    },
+    "products": {
+      "type": "array",
+      "description": "Detailed products list with titles, prices, SKUs, inventory, and variants"
+    },
+    "extracted_at": {
+      "type": "string",
+      "description": "ISO 8601 extraction timestamp"
+    }
+  },
+  "views": {
+    "overview": {
+      "title": "E-Commerce Intelligence Overview",
+      "transformation": {
+        "fields": [
+          "store_domain",
+          "platform_detected",
+          "currency",
+          "total_products_extracted",
+          "catalog_stats"
+        ]
+      },
+      "display": {
+        "component": "table",
+        "columns": [
+          { "label": "Store", "field": "store_domain" },
+          { "label": "Platform", "field": "platform_detected" },
+          { "label": "Currency", "field": "currency" },
+          { "label": "Products Count", "field": "total_products_extracted" },
+          { "label": "Catalog Stats", "field": "catalog_stats" }
+        ]
+      }
+    }
+  }
+}

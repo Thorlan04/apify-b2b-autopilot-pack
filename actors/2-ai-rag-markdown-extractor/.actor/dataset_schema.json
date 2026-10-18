@@ -1,0 +1,61 @@
+{
+  "actorSpecification": 1,
+  "fields": {
+    "url": {
+      "type": "string",
+      "description": "Source web page URL"
+    },
+    "title": {
+      "type": "string",
+      "description": "Clean page title"
+    },
+    "markdown_content": {
+      "type": "string",
+      "description": "Purified, noise-free Markdown content"
+    },
+    "word_count": {
+      "type": "integer",
+      "description": "Total word count of purified text"
+    },
+    "token_estimate": {
+      "type": "integer",
+      "description": "Estimated LLM tokens (OpenAI/Claude tokenizer estimate)"
+    },
+    "rag_chunks": {
+      "type": "array",
+      "description": "List of semantic chunks with vector indexing metadata"
+    },
+    "llms_txt_draft": {
+      "type": "string",
+      "description": "Standardized llms.txt draft generated for LLMs and AI search engines"
+    },
+    "extracted_at": {
+      "type": "string",
+      "description": "ISO 8601 extraction timestamp"
+    }
+  },
+  "views": {
+    "overview": {
+      "title": "RAG Markdown Overview",
+      "transformation": {
+        "fields": [
+          "url",
+          "title",
+          "word_count",
+          "token_estimate",
+          "markdown_content"
+        ]
+      },
+      "display": {
+        "component": "table",
+        "columns": [
+          { "label": "URL", "field": "url" },
+          { "label": "Title", "field": "title" },
+          { "label": "Words", "field": "word_count" },
+          { "label": "Tokens", "field": "token_estimate" },
+          { "label": "Markdown Snippet", "field": "markdown_content" }
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "title": "AI RAG Clean Markdown Extractor Input",
+  "type": "object",
+  "schemaVersion": 1,
+  "properties": {
+    "start_urls": {
+      "title": "Start URLs or Sitemaps",
+      "type": "array",
+      "description": "List of web page URLs or sitemap XML links (e.g. https://docs.python.org/3/tutorial/index.html).",
+      "editor": "stringList",
+      "prefill": [
+        "https://docs.python.org/3/tutorial/index.html",
+        "https://news.ycombinator.com"
+      ],
+      "default": [
+        "https://docs.python.org/3/tutorial/index.html",
+        "https://news.ycombinator.com"
+      ]
+    },
+    "chunk_size": {
+      "title": "RAG Chunk Size (approx. characters)",
+      "type": "integer",
+      "description": "Target character count per RAG chunk (approx. 4 characters = 1 token). Default 1600 (~400 tokens).",
+      "default": 1600,
+      "minimum": 200,
+      "maximum": 8000
+    },
+    "chunk_overlap": {
+      "title": "RAG Chunk Overlap (characters)",
+      "type": "integer",
+      "description": "Character overlap between consecutive chunks to preserve contextual coherence.",
+      "default": 200,
+      "minimum": 0,
+      "maximum": 1000
+    },
+    "max_pages": {
+      "title": "Max Pages to Process",
+      "type": "integer",
+      "description": "Maximum number of pages to process from sitemaps or URL lists.",
+      "default": 10,
+      "minimum": 1,
+      "maximum": 200
+    },
+    "generate_llms_txt": {
+      "title": "Generate llms.txt Draft",
+      "type": "boolean",
+      "description": "When true, generates a ready-to-use standardized llms.txt specification file draft for the domain.",
+      "default": true
+    }
+  },
+  "required": ["start_urls"]
+}
