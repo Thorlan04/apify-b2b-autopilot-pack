@@ -1,0 +1,13 @@
+{
+  "actorOutputSchemaVersion": 1,
+  "title": "AI RAG Markdown Extractor Output",
+  "type": "object",
+  "properties": {
+    "resultsDatasetUrl": {
+      "type": "string",
+      "title": "Clean Markdown & RAG Chunks",
+      "description": "Dataset containing purified Markdown, vector RAG chunks, and llms.txt drafts.",
+      "resourceType": "dataset"
+    }
+  }
+}

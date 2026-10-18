@@ -1,0 +1,13 @@
+{
+  "actorOutputSchemaVersion": 1,
+  "title": "E-Commerce JSON Intelligence Output",
+  "type": "object",
+  "properties": {
+    "resultsDatasetUrl": {
+      "type": "string",
+      "title": "E-Commerce Products & Catalog Intelligence",
+      "description": "Dataset containing products, prices, variants, stock statuses, and pricing statistics.",
+      "resourceType": "dataset"
+    }
+  }
+}
