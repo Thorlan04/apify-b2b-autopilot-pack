@@ -58,6 +58,7 @@ class TestActorJsonSchemas(unittest.TestCase):
                 self.assertTrue(bool(data.get("version")), f"Missing version in {aj}")
                 self.assertEqual(data.get("dockerfile"), "./Dockerfile")
                 self.assertEqual(data.get("input"), "./input_schema.json")
+                self.assertEqual(data.get("output"), "./output_schema.json")
 
     def test_input_schemas(self):
         input_schemas = list(REPO_ROOT.glob("actors/**/.actor/input_schema.json"))
@@ -70,6 +71,32 @@ class TestActorJsonSchemas(unittest.TestCase):
                 self.assertEqual(data.get("schemaVersion"), 1)
                 self.assertIn("properties", data)
                 self.assertIn("required", data)
+
+    def test_output_schemas(self):
+        output_schemas = list(REPO_ROOT.glob("actors/**/.actor/output_schema.json"))
+        self.assertEqual(len(output_schemas), 3, "Expected exactly 3 output_schema.json files")
+
+        for os_path in output_schemas:
+            with open(os_path, "r", encoding="utf-8") as f:
+                data = json.load(f)
+                self.assertEqual(data.get("actorOutputSchemaVersion"), 1)
+                self.assertEqual(data.get("type"), "object")
+                props = data.get("properties", {})
+                self.assertIn("dataset", props)
+                self.assertIn("template", props["dataset"])
+                self.assertEqual(props["dataset"]["template"], "{{links.apiDefaultDatasetUrl}}/items")
+
+    def test_dataset_schemas(self):
+        dataset_schemas = list(REPO_ROOT.glob("actors/**/.actor/dataset_schema.json"))
+        self.assertEqual(len(dataset_schemas), 3, "Expected exactly 3 dataset_schema.json files")
+
+        for ds_path in dataset_schemas:
+            with open(ds_path, "r", encoding="utf-8") as f:
+                data = json.load(f)
+                self.assertEqual(data.get("actorSpecification"), 1)
+                self.assertIn("fields", data)
+                self.assertIn("views", data)
+
 
 
 class TestActorAlgorithms(unittest.TestCase):
