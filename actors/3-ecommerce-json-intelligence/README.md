@@ -123,4 +123,4 @@ curl -X POST "https://api.apify.com/v2/acts/your-username~ecommerce-json-intelli
 
 ---
 
-*Last Automated Maintenance: 2026-10-18*
+*Last Automated Maintenance: 2026-10-19*

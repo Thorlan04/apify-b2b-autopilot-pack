@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "last_updated": "2026-10-18T09:43:15Z",
+  "last_updated": "2026-10-19T09:36:35Z",
   "shopify": {
     "endpoints": [
       "/products.json?limit=250",
