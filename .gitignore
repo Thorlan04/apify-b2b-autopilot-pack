@@ -32,6 +32,27 @@ venv/
 ENV/
 env/
 
+# Sensitive environment variables & secrets
+.env
+.env.*
+*.env
+*.pem
+*.key
+*.pfx
+*.p12
+*.crt
+credentials.json
+client_secret*.json
+*.secret
+*.token
+
+# Database & local backups
+*.sqlite
+*.sqlite3
+*.db
+*.dump
+*.bak
+
 # IDE and editors
 .idea/
 .vscode/
