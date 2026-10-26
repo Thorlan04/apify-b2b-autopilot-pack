@@ -3,7 +3,7 @@
   "name": "ai-rag-markdown-extractor",
   "title": "AI RAG Clean Markdown Extractor & llms.txt Generator",
   "description": "Universal web to pristine clean Markdown converter for AI & RAG pipelines (LangChain, LlamaIndex, Pinecone, OpenAI, Claude). Strips ads and cookie modals, converts HTML tables and links, generates semantic RAG chunks with token estimates, and creates standardized llms.txt files.",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "meta": {
     "templateId": "python-empty"
   },
